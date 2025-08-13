@@ -100,7 +100,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" as const }
   }
 };
 
@@ -109,7 +109,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" as const }
   }
 };
 
@@ -119,7 +119,7 @@ const floatVariants = {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -129,7 +129,7 @@ const countUpVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8, ease: "easeOut" as const }
   }
 };
 
@@ -283,7 +283,7 @@ export function StudentSuccess() {
             className="mt-6 p-6 bg-gradient-to-br from-primary-50 to-white rounded-xl border border-primary-100 shadow-md"
           >
             <p className="text-gray-700 italic">
-              "{successStories[selectedStory].story}"
+              &ldquo;{successStories[selectedStory].story}&rdquo;
             </p>
             <p className="mt-3 font-semibold text-gray-900">
               — {successStories[selectedStory].name}
@@ -326,7 +326,7 @@ export function StudentSuccess() {
                         </motion.div>
                       ))}
                     </div>
-                    <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                    <p className="text-gray-700 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                     <div>
                       <p className="font-semibold text-gray-900">{testimonial.author}</p>
                       <p className="text-sm text-gray-600">{testimonial.role}</p>
@@ -352,7 +352,7 @@ export function StudentSuccess() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join hundreds of students who have transformed their academic journey with 
               Crown Science Education. Whether you choose LMS Access or Full Enrollment, 
-              we're committed to your success.
+              we&apos;re committed to your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div

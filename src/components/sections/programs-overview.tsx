@@ -13,7 +13,6 @@ import {
   Clock, 
   MessageSquare, 
   BarChart, 
-  Award,
   CheckCircle,
   ArrowRight,
   Laptop,
@@ -39,7 +38,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" as const }
   }
 };
 
@@ -48,7 +47,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" as const }
   }
 };
 
@@ -58,7 +57,7 @@ const floatVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -255,7 +254,7 @@ export function ProgramsOverview() {
                         </Badge>
                         <motion.div
                           animate={{ rotate: [0, 360] }}
-                          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                          transition={{ duration: 3, repeat: Infinity, ease: "linear" as const }}
                         >
                           <Users className="h-6 w-6 text-primary-600" />
                         </motion.div>

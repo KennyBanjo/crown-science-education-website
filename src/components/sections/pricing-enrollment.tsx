@@ -86,7 +86,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" as const }
   }
 };
 
@@ -95,7 +95,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" as const }
   }
 };
 
@@ -105,7 +105,7 @@ const floatVariants = {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -146,14 +146,14 @@ export function PricingEnrollment() {
             variants={itemVariants}
             className="text-3xl font-display font-bold tracking-tight text-gray-900 sm:text-4xl"
           >
-            Invest in Your Child's Future
+            Invest in Your Child&apos;s Future
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto"
           >
             Transparent pricing with no hidden fees. Choose the program that fits your 
-            family's needs and budget. All programs include a satisfaction guarantee.
+            family&apos;s needs and budget. All programs include a satisfaction guarantee.
           </motion.p>
         </motion.div>
 
@@ -402,9 +402,9 @@ export function PricingEnrollment() {
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">Our Guarantee</h4>
               <p className="text-sm text-gray-600">
-                We're confident in our ability to help your child succeed. That's why we offer a 
-                30-day money-back guarantee for new enrollments. If you're not completely satisfied 
-                with our program in the first month, we'll refund your payment in full.
+                We&apos;re confident in our ability to help your child succeed. That&apos;s why we offer a 
+                30-day money-back guarantee for new enrollments. If you&apos;re not completely satisfied 
+                with our program in the first month, we&apos;ll refund your payment in full.
               </p>
             </div>
           </div>

@@ -22,7 +22,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8, ease: "easeOut" as const }
   }
 };
 
@@ -32,7 +32,7 @@ const floatVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -173,7 +173,7 @@ export function EnrollmentCTA() {
             >
               <motion.div
                 animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" as const }}
               >
                 <GraduationCap className="h-4 w-4 mr-2" />
               </motion.div>

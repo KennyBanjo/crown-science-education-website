@@ -22,7 +22,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" as const }
   }
 };
 
@@ -32,17 +32,8 @@ const floatVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
-  }
-};
-
-const scaleInVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
   }
 };
 
@@ -319,7 +310,7 @@ export function HeroSection() {
               <div className="flex items-center justify-between mb-4 mt-2">
                 <motion.div
                   animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" as const }}
                   className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center"
                 >
                   <GraduationCap className="h-5 w-5 text-primary-500" />
