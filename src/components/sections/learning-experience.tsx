@@ -297,7 +297,7 @@ export function LearningExperience() {
               Flexible Scheduling
             </h3>
             <p className="text-gray-600 mb-6">
-              We understand that every family has different schedules. That's why we offer 
+              We understand that every family has different schedules. That&apos;s why we offer 
               flexible timing options to fit your lifestyle.
             </p>
             <div className="space-y-4">

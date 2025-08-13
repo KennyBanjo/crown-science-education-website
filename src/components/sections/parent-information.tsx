@@ -141,14 +141,14 @@ export function ParentInformation() {
             variants={itemVariants}
             className="text-3xl font-display font-bold tracking-tight text-gray-900 sm:text-4xl"
           >
-            Supporting Your Child's Success Together
+            Supporting Your Child&apos;s Success Together
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto"
           >
-            We believe parent involvement is crucial to student success. That's why we provide 
-            comprehensive tools and support to keep you engaged in your child's education journey.
+            We believe parent involvement is crucial to student success. That&apos;s why we provide 
+            comprehensive tools and support to keep you engaged in your child&apos;s education journey.
           </motion.p>
         </motion.div>
 
@@ -239,8 +239,8 @@ export function ParentInformation() {
               What Parents Say
             </h3>
             <blockquote className="text-gray-700 italic mb-4">
-              "The parent portal gives me complete visibility into my son's progress. I love 
-              receiving weekly updates and being able to communicate directly with his tutor."
+              &ldquo;The parent portal gives me complete visibility into my son&apos;s progress. I love 
+              receiving weekly updates and being able to communicate directly with his tutor.&rdquo;
             </blockquote>
             <p className="font-semibold text-gray-900">— Rachel Thompson</p>
             <p className="text-sm text-gray-600">Parent of Year 10 Student</p>

@@ -275,9 +275,9 @@ export function MeetEducators() {
               <Quote className="h-10 w-10 text-white/30 mx-auto mb-4" />
             </motion.div>
             <p className="text-lg italic mb-4">
-              "The quality of teaching at Crown Science Education is exceptional. My daughter's 
+              &ldquo;The quality of teaching at Crown Science Education is exceptional. My daughter&apos;s 
               confidence in sciences has transformed completely, and her grades have improved from 
-              B's to A*'s across all subjects."
+              B&apos;s to A*&apos;s across all subjects.&rdquo;
             </p>
             <p className="font-semibold">— Parent of Year 11 Student</p>
           </div>
