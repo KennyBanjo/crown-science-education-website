@@ -6,28 +6,26 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-crown text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-crown-gold-400 text-white hover:bg-crown-gold-500 shadow-crown hover:shadow-crown-lg",
+          "bg-crown-gold-400 text-slate-900 hover:bg-crown-gold-500",
         secondary:
-          "bg-crown-teal-400 text-white hover:bg-crown-teal-500 shadow-sm hover:shadow-md",
+          "bg-slate-900 text-white hover:bg-slate-800",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-crown-gold-400 text-crown-gold-600 bg-transparent hover:bg-crown-gold-50 hover:text-crown-gold-700",
-        ghost: "hover:bg-crown-gold-50 hover:text-crown-gold-600",
-        link: "text-crown-gold-600 underline-offset-4 hover:underline hover:text-crown-gold-700",
-        gradient:
-          "bg-gradient-to-r from-crown-gold-400 to-crown-teal-400 text-white shadow-crown hover:shadow-crown-lg hover:from-crown-gold-500 hover:to-crown-teal-500",
+          "border border-foreground/30 text-foreground bg-transparent hover:bg-foreground/5",
+        ghost: "hover:bg-foreground/5",
+        link: "text-foreground underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 rounded-crown px-8 text-base",
-        xl: "h-14 rounded-crown px-10 text-lg",
+        sm: "h-9 px-3",
+        lg: "h-12 px-8 text-base",
+        xl: "h-14 px-10 text-lg",
         icon: "h-10 w-10",
       },
     },

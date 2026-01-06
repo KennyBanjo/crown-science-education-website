@@ -4,28 +4,30 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --primary: 33 87% 57%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 170 64% 51%;
-    --secondary-foreground: 0 0% 100%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --ring: 33 87% 57%;
-    --radius: 0.75rem;
+    --background: 35 33% 97%;
+    --foreground: 24 18% 12%;
+    --muted: 35 21% 92%;
+    --muted-foreground: 24 12% 38%;
+    --popover: 35 33% 97%;
+    --popover-foreground: 24 18% 12%;
+    --card: 35 33% 97%;
+    --card-foreground: 24 18% 12%;
+    --border: 30 14% 84%;
+    --input: 30 14% 84%;
+    --primary: 33 87% 55%;
+    --primary-foreground: 24 18% 12%;
+    --secondary: 24 12% 20%;
+    --secondary-foreground: 35 33% 97%;
+    --accent: 35 24% 93%;
+    --accent-foreground: 24 18% 12%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 35 33% 97%;
+    --ring: 33 87% 55%;
+    --radius: 0.5rem;
+    --page-gutter: clamp(1.5rem, 5vw, 4rem);
+    --section-space: clamp(3rem, 8vw, 6.5rem);
+    --section-space-tight: clamp(2rem, 6vw, 4rem);
     --crown-gold: #f59332;
-    --crown-teal: #2dd4bf;
   }
 
   .dark {
@@ -55,61 +57,63 @@
   * {
     border-color: hsl(var(--border));
   }
-  
+
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "liga" 1, "kern" 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+  h1 {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight;
+  }
+
+  h2 {
+    @apply font-display text-3xl sm:text-4xl leading-tight tracking-tight;
+  }
+
+  h3 {
+    @apply font-display text-2xl leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply underline-offset-4;
+  }
+}
+
+@layer components {
+  .page-container {
+    margin-inline: auto;
+    max-width: 72rem;
+    padding-inline: var(--page-gutter);
+  }
+
+  .section {
+    padding-block: var(--section-space);
+  }
+
+  .section-tight {
+    padding-block: var(--section-space-tight);
+  }
+
+  .section-divider {
+    @apply border-t border-border;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.25em] text-muted-foreground;
+  }
+
+  .lead {
+    @apply text-lg text-muted-foreground;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .animate-shimmer {
-    background: linear-gradient(
-      105deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.7) 50%,
-      transparent 60%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite linear;
-  }
-
-  .crown-glow {
-    box-shadow: 0 0 20px rgba(245, 147, 50, 0.3);
-  }
-
-  .crown-glow-teal {
-    box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-crown-gold-400 to-crown-teal-400;
-  }
-
-  .bg-crown-mesh {
-    background-image: 
-      radial-gradient(at 27% 37%, rgba(245, 147, 50, 0.1) 0px, transparent 50%),
-      radial-gradient(at 97% 21%, rgba(45, 212, 191, 0.1) 0px, transparent 50%),
-      radial-gradient(at 52% 99%, rgba(245, 147, 50, 0.05) 0px, transparent 50%),
-      radial-gradient(at 10% 29%, rgba(45, 212, 191, 0.05) 0px, transparent 50%),
-      radial-gradient(at 97% 96%, rgba(245, 147, 50, 0.08) 0px, transparent 50%),
-      radial-gradient(at 33% 50%, rgba(45, 212, 191, 0.08) 0px, transparent 50%);
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
   }
 }

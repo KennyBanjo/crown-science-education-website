@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
-const inter = Inter({
+const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-display",
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Crown Science Education - Transform Science Learning with AI-Powered LMS",
-  description: "Comprehensive learning management system and student management platform designed specifically for science education. Empower educators, engage students, achieve excellence.",
-  keywords: "science education, LMS, student management system, online learning, tutoring platform, educational technology",
+  title: "Crown Science Education | Premium UK Science Tutoring",
+  description:
+    "A premium UK science tutoring practice led by a single tutor for Year 7 to GCSE. Calm, structured teaching that builds confidence, depth, and exam readiness.",
+  keywords:
+    "science tutoring, GCSE science, Year 7 science, Year 8 science, Year 9 science, UK tutors, private tutoring",
   authors: [{ name: "Crown Science Education" }],
   openGraph: {
-    title: "Crown Science Education - Premium Science Learning Platform",
-    description: "Transform science education with our comprehensive LMS and student management system",
+    title: "Crown Science Education | Premium UK Science Tutoring",
+    description:
+      "Structured, academic science tutoring for Year 7 to GCSE, led by a single tutor and delivered with clarity and care.",
     url: "https://crownscience.edu",
     siteName: "Crown Science Education",
     images: [
@@ -26,13 +38,14 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    locale: "en_US",
+    locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Crown Science Education",
-    description: "Transform science education with AI-powered learning",
+    description:
+      "Premium UK science tutoring for Year 7 to GCSE with calm, structured teaching led by a single tutor.",
     images: ["/twitter-image.png"],
   },
   robots: {
@@ -54,10 +67,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en-GB"
+      className={`${sourceSans.variable} ${libreBaskerville.variable}`}
+    >
       <body className="font-sans antialiased">
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-24">{children}</main>
         <Footer />
       </body>
     </html>
