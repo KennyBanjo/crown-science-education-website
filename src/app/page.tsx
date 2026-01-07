@@ -294,11 +294,11 @@ export default function Home() {
               <p className="eyebrow">Testimonials</p>
               <h2 id="testimonials-title">What families notice.</h2>
             </div>
-            <div className="mt-10 space-y-10">
+            <div className="mt-10 grid gap-10 lg:grid-cols-2">
               <figure className="border-l border-border pl-6">
                 <blockquote className="text-lg italic text-foreground">
-                  “Working with her each week brought calm to science lessons. The
-                  focus on vocabulary and explanation made everything click.”
+                  &ldquo;Working with her each week brought calm to science lessons. The
+                  focus on vocabulary and explanation made everything click.&rdquo;
                 </blockquote>
                 <figcaption className="mt-3 text-sm text-muted-foreground">
                   Parent of Year 8 pupil, Islington
@@ -306,8 +306,8 @@ export default function Home() {
               </figure>
               <figure className="border-l border-border pl-6">
                 <blockquote className="text-lg italic text-foreground">
-                  “Her tutoring is structured but kind. I know exactly what to
-                  revise each week and my confidence in GCSE papers has grown.”
+                  &ldquo;Her tutoring is structured but kind. I know exactly what to
+                  revise each week and my confidence in GCSE papers has grown.&rdquo;
                 </blockquote>
                 <figcaption className="mt-3 text-sm text-muted-foreground">
                   GCSE student, Hertfordshire
@@ -315,14 +315,106 @@ export default function Home() {
               </figure>
               <figure className="border-l border-border pl-6">
                 <blockquote className="text-lg italic text-foreground">
-                  “We receive thoughtful updates that are easy to act on. It feels
-                  like a real partnership with the tutor. We always know what to
-                  practise next.”
+                  &ldquo;The portal makes everything simple. We can see what was covered,
+                  what to practise next, and the resources in one place. It&rsquo;s taken
+                  away the back-and-forth and helped us stay consistent between lessons.&rdquo;
                 </blockquote>
                 <figcaption className="mt-3 text-sm text-muted-foreground">
-                  Parent of Year 10 pupil, Kensington
+                  Parent of Year 10 pupil, London
                 </figcaption>
               </figure>
+              <figure className="border-l border-border pl-6">
+                <blockquote className="text-lg italic text-foreground">
+                  &ldquo;My daughter went from dreading chemistry to genuinely enjoying
+                  it. The patient, methodical approach made all the difference.&rdquo;
+                </blockquote>
+                <figcaption className="mt-3 text-sm text-muted-foreground">
+                  Parent of Year 9 pupil, Manchester
+                </figcaption>
+              </figure>
+              <figure className="border-l border-border pl-6">
+                <blockquote className="text-lg italic text-foreground">
+                  &ldquo;I improved from a grade 4 to a grade 7 in physics. The exam
+                  technique sessions were especially helpful for longer questions.&rdquo;
+                </blockquote>
+                <figcaption className="mt-3 text-sm text-muted-foreground">
+                  GCSE student, Birmingham
+                </figcaption>
+              </figure>
+              <figure className="border-l border-border pl-6">
+                <blockquote className="text-lg italic text-foreground">
+                  &ldquo;Having everything in the student portal keeps me organised. I know
+                  exactly what I&rsquo;m working on each week, and I can rewatch the videos
+                  and redo the questions before the next lesson.&rdquo;
+                </blockquote>
+                <figcaption className="mt-3 text-sm text-muted-foreground">
+                  GCSE student, Hertfordshire
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section
+        id="pricing"
+        className="section section-divider"
+        aria-labelledby="pricing-title"
+      >
+        <SectionDividerLine />
+        <Reveal>
+          <div className="page-container">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+              <div className="space-y-5">
+                <p className="eyebrow">Investment</p>
+                <h2 id="pricing-title">Clear, straightforward pricing.</h2>
+                <p className="lead">
+                  No hidden fees or complex packages. Choose the arrangement that
+                  suits your family&rsquo;s needs.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  All sessions include preparation, resources, and written
+                  feedback. Sibling discounts available.
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="space-y-4 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5 hover:border-border/80">
+                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    Per session
+                  </p>
+                  <p className="font-display text-4xl tracking-tight">
+                    £45<span className="text-lg text-muted-foreground">/hour</span>
+                  </p>
+                  <div className="h-px w-full bg-border" aria-hidden="true" />
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>One-to-one online session</li>
+                    <li>Tailored lesson materials</li>
+                    <li>Written feedback after each session</li>
+                    <li>Flexible scheduling</li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground">
+                    Ideal for occasional support or trial sessions.
+                  </p>
+                </div>
+                <div className="space-y-4 rounded-md border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50 hover:ring-primary/20">
+                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    Monthly commitment
+                  </p>
+                  <p className="font-display text-4xl tracking-tight">
+                    £160<span className="text-lg text-muted-foreground">/month</span>
+                  </p>
+                  <div className="h-px w-full bg-border" aria-hidden="true" />
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Four sessions per month</li>
+                    <li>Priority booking</li>
+                    <li>Half-termly progress reports</li>
+                    <li>Parent consultation included</li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground">
+                    Best value for consistent, structured progress.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </Reveal>

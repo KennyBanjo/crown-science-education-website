@@ -14,6 +14,7 @@ const navigation = [
   { name: "Progress", href: "/#progress" },
   { name: "Tutor", href: "/#tutor" },
   { name: "Testimonials", href: "/#testimonials" },
+  { name: "Pricing", href: "/#pricing" },
 ];
 
 export function Header() {
