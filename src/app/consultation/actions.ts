@@ -58,6 +58,7 @@ export async function getAvailableSlots(): Promise<
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'x-api-key': API_KEY,
       },
       cache: 'no-store', // Always fetch fresh slots
     });
@@ -94,6 +95,7 @@ export async function createBooking(
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'x-api-key': API_KEY,
       },
       body: JSON.stringify({
         requestId,

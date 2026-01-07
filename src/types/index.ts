@@ -10,6 +10,7 @@ export type PrimaryGoal = 'confidence' | 'grades' | 'exam_readiness' | 'other';
 // Consultation request data from intake form
 export interface ConsultationRequestData {
   parentEmail: string;
+  parentPhone: string;
   childYearGroup: YearGroup;
   subjects: Subject[];
   primaryGoal: PrimaryGoal;

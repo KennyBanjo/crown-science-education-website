@@ -6,6 +6,10 @@ export const consultationRequestSchema = z.object({
     .string()
     .min(1, 'Email is required')
     .email('Please enter a valid email address'),
+  parentPhone: z
+    .string()
+    .min(1, 'Phone number is required')
+    .regex(/^[\d\s\-+()]+$/, 'Please enter a valid phone number'),
   childYearGroup: z.enum(['Year 7', 'Year 8', 'Year 9', 'Year 10', 'Year 11'], {
     message: 'Please select a year group',
   }),

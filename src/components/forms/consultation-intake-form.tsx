@@ -57,6 +57,7 @@ export function ConsultationIntakeForm({ onSubmit }: ConsultationIntakeFormProps
     resolver: zodResolver(consultationRequestSchema),
     defaultValues: {
       parentEmail: '',
+      parentPhone: '',
       childYearGroup: undefined,
       subjects: [],
       primaryGoal: undefined,
@@ -231,6 +232,26 @@ export function ConsultationIntakeForm({ onSubmit }: ConsultationIntakeFormProps
         )}
         <p className="mt-2 text-xs text-muted-foreground">
           We&apos;ll send your confirmation here.
+        </p>
+      </div>
+
+      {/* Phone */}
+      <div>
+        <label htmlFor="phone" className="mb-3 block text-sm font-medium text-foreground">
+          Your phone number
+        </label>
+        <Input
+          id="phone"
+          type="tel"
+          {...register('parentPhone')}
+          placeholder="+44 7700 900000"
+          error={!!errors.parentPhone}
+        />
+        {errors.parentPhone && (
+          <p className="mt-2 text-sm text-destructive">{errors.parentPhone.message}</p>
+        )}
+        <p className="mt-2 text-xs text-muted-foreground">
+          In case we need to reach you about your consultation.
         </p>
       </div>
 
