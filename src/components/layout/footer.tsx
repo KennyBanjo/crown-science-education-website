@@ -22,7 +22,7 @@ const footerNavigation = {
 
 export function Footer() {
   return (
-    <footer className="section-divider bg-background">
+    <footer className="section-divider border-border bg-background">
       <div className="page-container section-tight">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_repeat(3,minmax(0,1fr))]">
           <div className="space-y-4">
@@ -43,7 +43,10 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {footerNavigation.explore.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-foreground">
+                  <Link
+                    href={item.href}
+                    className="link-underline hover:text-foreground"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -56,7 +59,10 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {footerNavigation.resources.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-foreground">
+                  <Link
+                    href={item.href}
+                    className="link-underline hover:text-foreground"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -69,7 +75,10 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {footerNavigation.policies.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-foreground">
+                  <Link
+                    href={item.href}
+                    className="link-underline hover:text-foreground"
+                  >
                     {item.name}
                   </Link>
                 </li>

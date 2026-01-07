@@ -21,7 +21,7 @@ export function Header() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 16);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,9 +31,9 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-200",
+        "fixed top-0 z-50 w-full transition-all duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm"
+          ? "bg-background/90 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       )}
     >
@@ -57,7 +57,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="link-underline text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {item.name}
               </Link>
@@ -70,7 +70,7 @@ export function Header() {
             </Button>
             <Link
               href="/portal"
-              className="text-sm text-muted-foreground hover:text-foreground"
+              className="link-underline text-sm text-muted-foreground hover:text-foreground"
             >
               Student portal login
             </Link>
@@ -99,7 +99,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base text-muted-foreground hover:text-foreground"
+                  className="link-underline block px-3 py-2 text-base text-muted-foreground hover:text-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -111,7 +111,7 @@ export function Header() {
                 </Button>
                 <Link
                   href="/portal"
-                  className="block text-center text-sm text-muted-foreground hover:text-foreground"
+                  className="link-underline block text-center text-sm text-muted-foreground hover:text-foreground"
                 >
                   Student portal login
                 </Link>
