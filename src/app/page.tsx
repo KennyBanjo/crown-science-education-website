@@ -364,56 +364,86 @@ export default function Home() {
         <SectionDividerLine />
         <Reveal>
           <div className="page-container">
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-              <div className="space-y-5">
-                <p className="eyebrow">Investment</p>
-                <h2 id="pricing-title">Clear, straightforward pricing.</h2>
-                <p className="lead">
-                  No hidden fees or complex packages. Choose the arrangement that
-                  suits your family&rsquo;s needs.
+            <div className="space-y-5 max-w-2xl">
+              <p className="eyebrow">Programmes</p>
+              <h2 id="pricing-title">Two pathways to progress.</h2>
+              <p className="lead">
+                Choose the programme that fits your child&rsquo;s needs. Both include
+                full access to resources, parent support, and termly reviews.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              <div className="space-y-5 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5 hover:border-border/80">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    Group programme
+                  </p>
+                  <h3 className="mt-2">Momentum</h3>
+                </div>
+                <p className="font-display text-4xl tracking-tight">
+                  £250<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  All sessions include preparation, resources, and written
-                  feedback. Sibling discounts available.
+                  Best for pupils building consistency and confidence over time.
                 </p>
+                <div className="h-px w-full bg-border" aria-hidden="true" />
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>3 sessions weekly (Tue, Thu, Fri)</li>
+                  <li>45 minutes each session</li>
+                  <li>Maximum 5 students per group</li>
+                  <li>Delivered by qualified teachers</li>
+                  <li>Strong recall through repetition and structure</li>
+                </ul>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="space-y-4 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5 hover:border-border/80">
+
+              <div className="space-y-5 rounded-md border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50 hover:ring-primary/20">
+                <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-                    Per session
+                    One-to-one
                   </p>
-                  <p className="font-display text-4xl tracking-tight">
-                    £45<span className="text-lg text-muted-foreground">/hour</span>
-                  </p>
-                  <div className="h-px w-full bg-border" aria-hidden="true" />
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>One-to-one online session</li>
-                    <li>Tailored lesson materials</li>
-                    <li>Written feedback after each session</li>
-                    <li>Flexible scheduling</li>
-                  </ul>
-                  <p className="text-xs text-muted-foreground">
-                    Ideal for occasional support or trial sessions.
-                  </p>
+                  <h3 className="mt-2">Progress Accelerator</h3>
                 </div>
-                <div className="space-y-4 rounded-md border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50 hover:ring-primary/20">
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-                    Monthly commitment
-                  </p>
-                  <p className="font-display text-4xl tracking-tight">
-                    £160<span className="text-lg text-muted-foreground">/month</span>
-                  </p>
-                  <div className="h-px w-full bg-border" aria-hidden="true" />
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>Four sessions per month</li>
-                    <li>Priority booking</li>
-                    <li>Half-termly progress reports</li>
-                    <li>Parent consultation included</li>
-                  </ul>
-                  <p className="text-xs text-muted-foreground">
-                    Best value for consistent, structured progress.
-                  </p>
-                </div>
+                <p className="font-display text-4xl tracking-tight">
+                  £495<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Best for pupils needing rapid improvement or exam-focused intervention.
+                </p>
+                <div className="h-px w-full bg-border" aria-hidden="true" />
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>3 sessions weekly (Tue, Thu, Fri)</li>
+                  <li>45 minutes each session</li>
+                  <li>Fully personalised teaching</li>
+                  <li>Targeted gap closure and focused exam preparation</li>
+                  <li>Direct work with Mrs Adeyemi</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10 grid gap-8 border-t border-border pt-10 lg:grid-cols-2">
+              <div className="space-y-4">
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Included in both programmes
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Curriculum-aligned planning</li>
+                  <li>Weekly parent reports</li>
+                  <li>Digital resources and walkthroughs</li>
+                  <li>Termly progress reviews</li>
+                  <li>Parent support Monday to Saturday</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Expected outcomes
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>Strong knowledge recall</li>
+                  <li>Increased exam confidence</li>
+                  <li>Clear progress toward Grade 7 to Grade 9</li>
+                  <li>Better independent study habits</li>
+                </ul>
               </div>
             </div>
           </div>
