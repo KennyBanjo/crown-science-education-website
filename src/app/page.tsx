@@ -35,10 +35,10 @@ export default function Home() {
                   <Link href="/consultation">Book a consultation</Link>
                 </Button>
                 <Link
-                  href="/portal"
+                  href="https://crown-lms.vercel.app/login?t=family"
                   className="link-underline text-sm text-muted-foreground hover:text-foreground"
                 >
-                  Student portal login
+                  Portal login
                 </Link>
               </div>
               <div className="space-y-3 border-l border-border pl-6 text-sm text-muted-foreground">
@@ -47,31 +47,33 @@ export default function Home() {
                 </p>
                 <p>
                   One tutor, consistent guidance from the first assessment to
-                  exam season. London-based tutoring with online sessions across
+                  exam season. Leeds-based tutoring with online sessions across
                   the UK. Families use a secure learning hub / student portal to
                   keep shared targets and notes in one calm place.
                 </p>
               </div>
             </Stagger>
-            <figure className="space-y-4">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-muted">
-                <Image
-                  src="/images/hero-student.webp"
-                  alt="Student studying science at home"
-                  fill
-                  className="object-cover saturate-75 contrast-90 brightness-95"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  priority
-                />
-                <div
-                  className="absolute inset-0 bg-background/20"
-                  aria-hidden="true"
-                />
-              </div>
-              <figcaption className="text-sm text-muted-foreground">
-                Focused study supported by a calm, structured tutor.
-              </figcaption>
-            </figure>
+            <Reveal>
+              <figure className="space-y-4">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-muted">
+                  <Image
+                    src="/images/hero-student.webp"
+                    alt="Student studying science at home"
+                    fill
+                    className="object-cover saturate-75 contrast-90 brightness-95"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority
+                  />
+                  <div
+                    className="absolute inset-0 bg-background/20"
+                    aria-hidden="true"
+                  />
+                </div>
+                <figcaption className="text-sm text-muted-foreground">
+                  Focused study supported by a calm, structured tutor.
+                </figcaption>
+              </figure>
+            </Reveal>
           </div>
         </div>
       </section>

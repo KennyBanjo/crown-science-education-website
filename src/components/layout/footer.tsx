@@ -10,7 +10,7 @@ const footerNavigation = {
   ],
   resources: [
     { name: "Book a consultation", href: "/consultation" },
-    { name: "Student portal login", href: "/portal" },
+    { name: "Portal login", href: "https://crown-lms.vercel.app/login?t=family" },
     { name: "Contact", href: "/contact" },
   ],
   policies: [

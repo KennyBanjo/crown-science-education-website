@@ -48,6 +48,9 @@ export const metadata: Metadata = {
       "Premium UK science tutoring for Year 7 to GCSE with calm, structured teaching led by a single tutor.",
     images: ["/twitter-image.png"],
   },
+  icons: {
+    icon: "/images/favicon.png",
+  },
   robots: {
     index: true,
     follow: true,

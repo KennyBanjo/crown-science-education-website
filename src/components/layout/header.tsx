@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,13 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const reduceMotion = useReducedMotion();
+
+  const menuMotion = {
+    initial: { opacity: 0, y: reduceMotion ? 0 : 8 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: reduceMotion ? 0 : 6 },
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +35,20 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  React.useEffect(() => {
+    if (!mobileMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -42,10 +64,10 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/crown-logo.png"
+                src="/images/Website%20logo.png"
                 alt="Crown Science Education"
-                width={250}
-                height={80}
+                width={220}
+                height={132}
                 className="h-12 w-auto"
                 priority
               />
@@ -69,10 +91,10 @@ export function Header() {
               <Link href="/consultation">Book a consultation</Link>
             </Button>
             <Link
-              href="/portal"
+              href="https://crown-lms.vercel.app/login?t=family"
               className="link-underline text-sm text-muted-foreground hover:text-foreground"
             >
-              Student portal login
+              Portal login
             </Link>
           </div>
 
@@ -92,33 +114,41 @@ export function Header() {
           </div>
         </div>
 
-        {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="space-y-1 pb-4 pt-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="link-underline block px-3 py-2 text-base text-muted-foreground hover:text-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="mt-4 space-y-2 px-3">
-                <Button className="w-full" variant="outline" asChild>
-                  <Link href="/consultation">Book a consultation</Link>
-                </Button>
-                <Link
-                  href="/portal"
-                  className="link-underline block text-center text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Student portal login
-                </Link>
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              className="md:hidden fixed inset-x-0 top-20 bottom-0 z-40 border-t border-border bg-background shadow-sm"
+              initial={menuMotion.initial}
+              animate={menuMotion.animate}
+              exit={menuMotion.exit}
+              transition={{ duration: reduceMotion ? 0.01 : 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="page-container h-full space-y-2 overflow-y-auto py-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="link-underline block px-1 py-2 text-base text-muted-foreground hover:text-foreground"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="mt-4 space-y-2">
+                  <Button className="w-full" variant="outline" asChild>
+                    <Link href="/consultation">Book a consultation</Link>
+                  </Button>
+                  <Link
+                    href="https://crown-lms.vercel.app/login?t=family"
+                    className="link-underline block text-center text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Portal login
+                  </Link>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
