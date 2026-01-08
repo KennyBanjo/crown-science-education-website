@@ -1,40 +1,24 @@
 'use client';
 
 import { useEffect } from 'react';
-import Script from 'next/script';
 import { Reveal } from '@/components/motion/reveal';
-
-// Declare Togever on window for TypeScript
-declare global {
-  interface Window {
-    Togever?: {
-      init: (config: {
-        container: string;
-        orgSlug: string;
-        mode: 'inline' | 'modal';
-      }) => void;
-    };
-  }
-}
 
 const WIDGET_URL = process.env.NEXT_PUBLIC_TOGEVER_WIDGET_URL || 'http://localhost:3000';
 
 export default function ConsultationPage() {
-  const initWidget = () => {
-    if (window.Togever) {
-      window.Togever.init({
-        container: '#togever-booking',
-        orgSlug: 'crown-education',
-        mode: 'inline',
-      });
-    }
-  };
-
-  // Try to init if script is already loaded (e.g., on client-side navigation)
   useEffect(() => {
-    if (window.Togever) {
-      initWidget();
-    }
+    // Auto-resize iframe based on content
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data && e.data.type === 'togever-booking-resize') {
+        const iframe = document.getElementById('togever-booking-iframe') as HTMLIFrameElement;
+        if (iframe) {
+          iframe.style.height = e.data.height + 'px';
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
   }, []);
 
   return (
@@ -64,17 +48,21 @@ export default function ConsultationPage() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-2xl px-6">
           <Reveal>
-            <div id="togever-booking" className="min-h-[400px]" />
+            <iframe
+              id="togever-booking-iframe"
+              src={`${WIDGET_URL}/book/crown-education?embed=true`}
+              width="100%"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                border: 'none',
+                minHeight: '600px',
+                overflow: 'hidden',
+              }}
+            />
           </Reveal>
         </div>
       </section>
-
-      {/* Load Togever widget script */}
-      <Script
-        src={`${WIDGET_URL}/widget.js`}
-        strategy="afterInteractive"
-        onLoad={initWidget}
-      />
     </main>
   );
 }
