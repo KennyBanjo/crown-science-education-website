@@ -1,36 +1,40 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useEffect } from 'react';
+import Script from 'next/script';
 import { Reveal } from '@/components/motion/reveal';
-import { ConsultationIntakeForm } from '@/components/forms/consultation-intake-form';
-import { SlotPicker } from '@/components/forms/slot-picker';
-import { BookingConfirmation } from '@/components/forms/booking-confirmation';
-import type {
-  ConsultationStep,
-  ConsultationRequest,
-  ConsultationBooking,
-} from '@/types';
+
+// Declare Togever on window for TypeScript
+declare global {
+  interface Window {
+    Togever?: {
+      init: (config: {
+        container: string;
+        orgSlug: string;
+        mode: 'inline' | 'modal';
+      }) => void;
+    };
+  }
+}
+
+const WIDGET_URL = process.env.NEXT_PUBLIC_TOGEVER_WIDGET_URL || 'http://localhost:3000';
 
 export default function ConsultationPage() {
-  const [step, setStep] = useState<ConsultationStep>('intake');
-  const [requestId, setRequestId] = useState<string | null>(null);
-  const [booking, setBooking] = useState<ConsultationBooking | null>(null);
-  const [parentEmail, setParentEmail] = useState<string>('');
+  const initWidget = () => {
+    if (window.Togever) {
+      window.Togever.init({
+        container: '#togever-booking',
+        orgSlug: 'crown-education',
+        mode: 'inline',
+      });
+    }
+  };
 
-  const handleIntakeSubmit = useCallback((request: ConsultationRequest) => {
-    setRequestId(request.id);
-    setParentEmail(request.parentEmail);
-    setStep('schedule');
-  }, []);
-
-  const handleBookingComplete = useCallback((newBooking: ConsultationBooking) => {
-    setBooking(newBooking);
-    setStep('confirmed');
-  }, []);
-
-  const handleBack = useCallback(() => {
-    setStep('intake');
-    setRequestId(null);
+  // Try to init if script is already loaded (e.g., on client-side navigation)
+  useEffect(() => {
+    if (window.Togever) {
+      initWidget();
+    }
   }, []);
 
   return (
@@ -50,82 +54,27 @@ export default function ConsultationPage() {
           </Reveal>
           <Reveal>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              {step === 'intake' &&
-                'Share a few details about your child, and we&apos;ll match you with the perfect time for a 25-minute conversation.'}
-              {step === 'schedule' &&
-                'Choose a convenient time for your free consultation call.'}
-              {step === 'confirmed' &&
-                'Your consultation is confirmed. We look forward to speaking with you.'}
+              Share a few details about your child, and we&apos;ll match you with the perfect time for a 25-minute conversation.
             </p>
           </Reveal>
+        </div>
+      </section>
 
-          {/* Step indicator */}
+      {/* Widget section */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-2xl px-6">
           <Reveal>
-            <div className="mt-8 flex items-center justify-center gap-2">
-              <div
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  step === 'intake'
-                    ? 'bg-crown-gold-500'
-                    : 'bg-crown-gold-500'
-                }`}
-              />
-              <div
-                className={`h-px w-8 transition-colors ${
-                  step !== 'intake' ? 'bg-crown-gold-500' : 'bg-foreground/20'
-                }`}
-              />
-              <div
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  step === 'schedule'
-                    ? 'bg-crown-gold-500'
-                    : step === 'confirmed'
-                    ? 'bg-crown-gold-500'
-                    : 'bg-foreground/20'
-                }`}
-              />
-              <div
-                className={`h-px w-8 transition-colors ${
-                  step === 'confirmed' ? 'bg-crown-gold-500' : 'bg-foreground/20'
-                }`}
-              />
-              <div
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  step === 'confirmed'
-                    ? 'bg-crown-gold-500'
-                    : 'bg-foreground/20'
-                }`}
-              />
-            </div>
+            <div id="togever-booking" className="min-h-[400px]" />
           </Reveal>
         </div>
       </section>
 
-      {/* Form section */}
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto max-w-xl px-6">
-          {step === 'intake' && (
-            <Reveal>
-              <ConsultationIntakeForm onSubmit={handleIntakeSubmit} />
-            </Reveal>
-          )}
-
-          {step === 'schedule' && requestId && (
-            <Reveal>
-              <SlotPicker
-                requestId={requestId}
-                onBook={handleBookingComplete}
-                onBack={handleBack}
-              />
-            </Reveal>
-          )}
-
-          {step === 'confirmed' && booking && (
-            <Reveal>
-              <BookingConfirmation booking={booking} parentEmail={parentEmail} />
-            </Reveal>
-          )}
-        </div>
-      </section>
+      {/* Load Togever widget script */}
+      <Script
+        src={`${WIDGET_URL}/widget.js`}
+        strategy="afterInteractive"
+        onLoad={initWidget}
+      />
     </main>
   );
 }
