@@ -54,6 +54,7 @@ export default function ConsultationPage() {
               width="100%"
               frameBorder="0"
               scrolling="no"
+              referrerPolicy="strict-origin-when-cross-origin"
               style={{
                 border: 'none',
                 minHeight: '600px',
