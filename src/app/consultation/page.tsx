@@ -17,6 +17,15 @@ export default function ConsultationPage() {
       }
     };
 
+    // Update iframe src with parent domain
+    const iframe = document.getElementById('togever-booking-iframe') as HTMLIFrameElement;
+    if (iframe && typeof window !== 'undefined') {
+      const parentDomain = window.location.hostname;
+      const url = new URL(iframe.src);
+      url.searchParams.set('parentDomain', parentDomain);
+      iframe.src = url.toString();
+    }
+
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
   }, []);
