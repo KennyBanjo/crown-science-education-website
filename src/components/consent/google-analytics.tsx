@@ -7,6 +7,13 @@ import { useCookieConsent } from "@/lib/consent/use-cookie-consent";
 // Google Analytics Measurement ID (will be set via environment variable)
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    [key: string]: unknown;
+  }
+}
+
 export function GoogleAnalytics() {
   const { consentStatus } = useCookieConsent();
 
@@ -14,7 +21,7 @@ export function GoogleAnalytics() {
     // If consent is rejected, disable GA
     if (consentStatus === "rejected" && typeof window !== "undefined") {
       // Disable GA by setting the disable flag
-      (window as any)[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+      window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
 
       // Remove GA cookies if they exist
       const cookiesToRemove = ["_ga", "_gat", "_gid"];
