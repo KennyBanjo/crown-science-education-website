@@ -13,8 +13,8 @@ export function GoogleAnalytics() {
   useEffect(() => {
     // If consent is rejected, disable GA
     if (consentStatus === "rejected" && typeof window !== "undefined") {
-      // @ts-ignore
-      window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+      // Disable GA by setting the disable flag
+      (window as any)[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
 
       // Remove GA cookies if they exist
       const cookiesToRemove = ["_ga", "_gat", "_gid"];
