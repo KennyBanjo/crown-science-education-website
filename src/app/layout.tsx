@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { CookieConsentProvider } from "@/lib/consent/use-cookie-consent";
+import { CookieConsentBanner } from "@/components/consent/cookie-consent-banner";
+import { GoogleAnalytics } from "@/components/consent/google-analytics";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -75,9 +78,13 @@ export default function RootLayout({
       className={`${sourceSans.variable} ${libreBaskerville.variable}`}
     >
       <body className="font-sans antialiased">
-        <Header />
-        <main className="pt-24">{children}</main>
-        <Footer />
+        <CookieConsentProvider>
+          <GoogleAnalytics />
+          <Header />
+          <main className="pt-24">{children}</main>
+          <Footer />
+          <CookieConsentBanner />
+        </CookieConsentProvider>
       </body>
     </html>
   );

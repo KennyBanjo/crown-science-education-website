@@ -92,7 +92,7 @@ export function Header() {
               <Link href="/consultation">Book a consultation</Link>
             </Button>
             <Link
-              href="https://crown-lms.vercel.app/login?t=family"
+              href="https://app.togeverapp.com/login?t=family"
               className="link-underline text-sm text-muted-foreground hover:text-foreground"
             >
               Portal login
@@ -140,7 +140,7 @@ export function Header() {
                     <Link href="/consultation">Book a consultation</Link>
                   </Button>
                   <Link
-                    href="https://crown-lms.vercel.app/login?t=family"
+                    href="https://app.togeverapp.com/login?t=family"
                     className="link-underline block text-center text-sm text-muted-foreground hover:text-foreground"
                   >
                     Portal login

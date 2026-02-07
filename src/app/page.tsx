@@ -35,7 +35,7 @@ export default function Home() {
                   <Link href="/consultation">Book a consultation</Link>
                 </Button>
                 <Link
-                  href="https://crown-lms.vercel.app/login?t=family"
+                  href="https://app.togeverapp.com/login?t=family"
                   className="link-underline text-sm text-muted-foreground hover:text-foreground"
                 >
                   Portal login
@@ -376,10 +376,10 @@ export default function Home() {
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
               <div className="space-y-5 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5 hover:border-border/80">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <span className="inline-block rounded-sm bg-secondary/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-secondary-700 dark:text-secondary-300">
                     Group programme
-                  </p>
-                  <h3 className="mt-2">Momentum</h3>
+                  </span>
+                  <h3 className="mt-4">Momentum</h3>
                 </div>
                 <p className="font-display text-4xl tracking-tight">
                   £250<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
@@ -389,7 +389,7 @@ export default function Home() {
                 </p>
                 <div className="h-px w-full bg-border" aria-hidden="true" />
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>3 sessions weekly (Tue, Thu, Fri)</li>
+                  <li>3 sessions weekly</li>
                   <li>45 minutes each session</li>
                   <li>Maximum 5 students per group</li>
                   <li>Delivered by qualified teachers</li>
@@ -399,10 +399,10 @@ export default function Home() {
 
               <div className="space-y-5 rounded-md border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50 hover:ring-primary/20">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <span className="inline-block rounded-sm bg-primary/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-700 dark:text-primary-300">
                     One-to-one
-                  </p>
-                  <h3 className="mt-2">Progress Accelerator</h3>
+                  </span>
+                  <h3 className="mt-4">Progress Accelerator</h3>
                 </div>
                 <p className="font-display text-4xl tracking-tight">
                   £495<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
@@ -412,7 +412,7 @@ export default function Home() {
                 </p>
                 <div className="h-px w-full bg-border" aria-hidden="true" />
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>3 sessions weekly (Tue, Thu, Fri)</li>
+                  <li>3 sessions weekly</li>
                   <li>45 minutes each session</li>
                   <li>Fully personalised teaching</li>
                   <li>Targeted gap closure and focused exam preparation</li>

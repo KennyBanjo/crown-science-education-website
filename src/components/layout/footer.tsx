@@ -10,11 +10,12 @@ const footerNavigation = {
   ],
   resources: [
     { name: "Book a consultation", href: "/consultation" },
-    { name: "Portal login", href: "https://crown-lms.vercel.app/login?t=family" },
+    { name: "Portal login", href: "https://app.togeverapp.com/login?t=family" },
     { name: "Contact", href: "/contact" },
   ],
   policies: [
     { name: "Privacy policy", href: "/privacy" },
+    { name: "Cookie preferences", href: "/cookie-preferences" },
     { name: "Terms of service", href: "/terms" },
     { name: "Safeguarding", href: "/safeguarding" },
   ],
