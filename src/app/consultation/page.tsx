@@ -50,7 +50,7 @@ export default function ConsultationPage() {
           <Reveal>
             <iframe
               id="togever-booking-iframe"
-              src={`${WIDGET_URL}/book/crown-education?embed=true`}
+              src={`${WIDGET_URL}/book/crown-science-education?embed=true`}
               width="100%"
               frameBorder="0"
               scrolling="no"
