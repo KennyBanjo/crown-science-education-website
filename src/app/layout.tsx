@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { CookieConsentProvider } from "@/lib/consent/use-cookie-consent";
 import { CookieConsentBanner } from "@/components/consent/cookie-consent-banner";
 import { GoogleAnalytics } from "@/components/consent/google-analytics";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -85,6 +86,7 @@ export default function RootLayout({
           <Footer />
           <CookieConsentBanner />
         </CookieConsentProvider>
+        <WhatsAppWidget />
       </body>
     </html>
   );
