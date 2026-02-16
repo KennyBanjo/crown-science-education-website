@@ -33,9 +33,9 @@ export function Footer() {
               clarity, discipline, and steady progress.
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>London, United Kingdom</p>
-              <p>020 7946 0958</p>
-              <p>admissions@crownscience.edu</p>
+              <p>Leeds, United Kingdom</p>
+              <p>+44 7737 571541</p>
+              <p>taiwoteaching@gmail.com</p>
             </div>
           </div>
 

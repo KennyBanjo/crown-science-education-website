@@ -476,7 +476,7 @@ export default function Home() {
               </Button>
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
-              Prefer to start by email? Write to admissions@crownscience.edu.
+              Prefer to start by email? Write to taiwoteaching@gmail.com.
             </p>
           </div>
         </Reveal>

@@ -220,7 +220,7 @@ export default function CookiePreferencesPage() {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     If you have questions about our use of cookies, please{" "}
-                    <a href="mailto:admissions@crownscience.edu" className="link-underline text-foreground">
+                    <a href="mailto:taiwoteaching@gmail.com" className="link-underline text-foreground">
                       contact us
                     </a>.
                   </p>

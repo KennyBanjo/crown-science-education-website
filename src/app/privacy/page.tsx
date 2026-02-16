@@ -56,9 +56,9 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-2 text-sm">
                   <p className="font-medium text-foreground">Data Controller:</p>
                   <p className="text-muted-foreground">Crown Science Education</p>
-                  <p className="text-muted-foreground">London, United Kingdom</p>
-                  <p className="text-muted-foreground">Email: admissions@crownscience.edu</p>
-                  <p className="text-muted-foreground">Phone: 020 7946 0958</p>
+                  <p className="text-muted-foreground">Leeds, United Kingdom</p>
+                  <p className="text-muted-foreground">Email: taiwoteaching@gmail.com</p>
+                  <p className="text-muted-foreground">Phone: +44 7737 571541</p>
                 </div>
               </div>
             </Reveal>
@@ -399,7 +399,7 @@ export default function PrivacyPolicyPage() {
 
                 <div className="mt-6 rounded-md border border-border bg-muted/30 p-4">
                   <p className="text-sm text-muted-foreground">
-                    To exercise any of these rights, please contact us at <a href="mailto:admissions@crownscience.edu" className="link-underline text-foreground">admissions@crownscience.edu</a>. We will respond to your request within one month.
+                    To exercise any of these rights, please contact us at <a href="mailto:taiwoteaching@gmail.com" className="link-underline text-foreground">taiwoteaching@gmail.com</a>. We will respond to your request within one month.
                   </p>
                 </div>
               </div>
@@ -513,16 +513,16 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-md border-2 border-primary/20 bg-primary/5 p-6 space-y-3 text-sm">
                   <div>
                     <p className="font-medium text-foreground">Email:</p>
-                    <a href="mailto:admissions@crownscience.edu" className="link-underline text-foreground">admissions@crownscience.edu</a>
+                    <a href="mailto:taiwoteaching@gmail.com" className="link-underline text-foreground">taiwoteaching@gmail.com</a>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone:</p>
-                    <a href="tel:02079460958" className="link-underline text-foreground">020 7946 0958</a>
+                    <a href="tel:+447737571541" className="link-underline text-foreground">+44 7737 571541</a>
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Post:</p>
                     <p className="text-muted-foreground">Crown Science Education</p>
-                    <p className="text-muted-foreground">London, United Kingdom</p>
+                    <p className="text-muted-foreground">Leeds, United Kingdom</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground mt-4">
