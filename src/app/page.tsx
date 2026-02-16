@@ -416,7 +416,6 @@ export default function Home() {
                   <li>45 minutes each session</li>
                   <li>Fully personalised teaching</li>
                   <li>Targeted gap closure and focused exam preparation</li>
-                  <li>Direct work with Mrs Adeyemi</li>
                 </ul>
               </div>
             </div>
