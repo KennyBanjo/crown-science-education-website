@@ -29,8 +29,8 @@ export function Footer() {
           <div className="space-y-4">
             <p className="font-display text-xl">Crown Science Education</p>
             <p className="text-sm text-muted-foreground">
-              A single-tutor UK science practice for Year 7 to GCSE, rooted in
-              clarity, discipline, and steady progress.
+              A specialist UK science academy for Year 7 to GCSE students, grounded in
+              clarity, discipline and structured academic progress.
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
               <p>Leeds, United Kingdom</p>
