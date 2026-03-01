@@ -11,6 +11,7 @@ const footerNavigation = {
   resources: [
     { name: "Book a consultation", href: "/consultation" },
     { name: "Portal login", href: "https://app.togeverapp.com/login?t=family" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ],
   policies: [

@@ -61,3 +61,22 @@ export interface ConsultationBooking {
 
 // Steps in the consultation booking flow
 export type ConsultationStep = 'intake' | 'schedule' | 'confirmed';
+
+// Blog post categories
+export type BlogCategory = 'Study Tips & Exam Prep' | 'Science Education' | 'Subject Guides';
+
+// Blog post frontmatter metadata
+export interface BlogPostMeta {
+  title: string;
+  description: string;
+  date: string;
+  category: BlogCategory;
+  slug: string;
+  image: string;
+  readingTime: string;
+}
+
+// Full blog post with MDX content
+export interface BlogPost extends BlogPostMeta {
+  content: string;
+}

@@ -137,6 +137,32 @@
     transform: scaleX(1);
   }
 
+  .prose-crown {
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-body: hsl(var(--muted-foreground));
+    --tw-prose-links: #be4110;
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-counters: hsl(var(--muted-foreground));
+    --tw-prose-bullets: hsl(var(--border));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: #f59332;
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-pre-code: hsl(var(--muted-foreground));
+    --tw-prose-pre-bg: hsl(var(--muted));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+  }
+
+  .prose-crown a {
+    text-decoration-color: #f59332;
+    transition: color 0.2s;
+  }
+
+  .prose-crown a:hover {
+    color: #f59332;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
