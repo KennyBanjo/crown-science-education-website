@@ -18,17 +18,20 @@ export default function Home() {
               </h1>
               <div className="h-px w-20 bg-border" aria-hidden="true" />
               <p className="lead">
-                Crown Science Education is a single-tutor UK practice focused
-                on confidence, progression, and exam readiness.
+                Students join a structured, standards driven programme focused
+                on exam precision and measurable progress.
               </p>
               <p className="text-muted-foreground">
-                Every pupil works directly with me, building a steady academic
-                relationship with clear expectations.
+                Sessions are delivered one to one or in carefully selected
+                small groups.
               </p>
               <p className="text-muted-foreground">
-                Sessions are one-to-one, with occasional small-group revision
-                workshops, strengthening core understanding before moving into
-                exam technique and independent thinking.
+                All teaching follows the Crown academic framework. Expectations
+                are high and they are consistent.
+              </p>
+              <p className="text-muted-foreground">
+                This is not casual tutoring. It is structured, exam focused
+                science teaching with clear standards.
               </p>
               <div className="flex flex-wrap items-center gap-5">
                 <Button size="lg" asChild>
