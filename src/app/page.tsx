@@ -226,7 +226,7 @@ export default function Home() {
                   />
                 </div>
                 <figcaption className="text-sm text-muted-foreground">
-                  Founder and lead tutor, Crown Science Education.
+                  Founder and lead practitioner, Crown Science Education.
                 </figcaption>
               </figure>
               <div className="space-y-5">
