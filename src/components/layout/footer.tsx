@@ -34,7 +34,8 @@ export function Footer() {
               clarity, discipline and structured academic progress.
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>Leeds, United Kingdom</p>
+              <p>71-75 Shelton Street, Covent Garden</p>
+              <p>London, WC2H 9JQ</p>
               <p>+44 7737 571541</p>
               <p>taiwoteaching@gmail.com</p>
             </div>

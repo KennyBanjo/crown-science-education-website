@@ -82,19 +82,6 @@ export default function TermsPage() {
                   Crown Science Education Ltd will commence tuition and provide all login details for the online learning platform upon confirmation of the bank transfer of the advance tuition fee to the company&apos;s bank account.
                 </p>
 
-                <div className="rounded-md border border-border bg-muted/30 p-6 space-y-2 text-sm">
-                  <p className="font-medium text-foreground">Payment Details</p>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Account Number:</span>
-                    <span className="font-medium text-foreground">87843100</span>
-                  </div>
-                  <div className="h-px bg-border" />
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Sort Code:</span>
-                    <span className="font-medium text-foreground">04-00-03</span>
-                  </div>
-                </div>
-
                 <div className="space-y-3">
                   <div className="border-l-2 border-primary/30 pl-4">
                     <h3 className="text-lg font-medium">Late Payment</h3>
@@ -455,7 +442,10 @@ export default function TermsPage() {
                   <div>
                     <p className="font-medium text-foreground">Post:</p>
                     <p className="text-muted-foreground">Crown Science Education Ltd</p>
-                    <p className="text-muted-foreground">Leeds, United Kingdom</p>
+                    <p className="text-muted-foreground">71-75 Shelton Street</p>
+                    <p className="text-muted-foreground">Covent Garden</p>
+                    <p className="text-muted-foreground">London</p>
+                    <p className="text-muted-foreground">WC2H 9JQ</p>
                   </div>
                 </div>
               </div>

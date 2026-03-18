@@ -50,7 +50,7 @@ export default function Home() {
                 </p>
                 <p>
                   One tutor, consistent guidance from the first assessment to
-                  exam season. Leeds-based tutoring with online sessions across
+                  exam season. London-based tutoring with online sessions across
                   the UK. Families use a secure learning hub / student portal to
                   keep shared targets and notes in one calm place.
                 </p>

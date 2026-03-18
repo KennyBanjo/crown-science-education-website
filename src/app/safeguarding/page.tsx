@@ -81,39 +81,10 @@ export default function SafeguardingPage() {
               </div>
             </Reveal>
 
-            {/* 2. Designated Safeguarding Lead */}
+            {/* 2. Safer Recruitment */}
             <Reveal>
               <div className="space-y-4">
-                <h2>2. Designated Safeguarding Lead</h2>
-                <p className="text-muted-foreground">
-                  Crown Science Education Ltd has a Designated Safeguarding Lead (DSL) who is responsible for overseeing all safeguarding matters. The DSL is the first point of contact for any safeguarding concerns.
-                </p>
-
-                <div className="rounded-md border border-border bg-muted/30 p-6 space-y-2 text-sm">
-                  <p className="font-medium text-foreground">Designated Safeguarding Lead</p>
-                  <p className="text-muted-foreground">Crown Science Education Ltd</p>
-                  <p className="text-muted-foreground">Email: <a href="mailto:taiwoteaching@gmail.com" className="link-underline text-foreground">taiwoteaching@gmail.com</a></p>
-                  <p className="text-muted-foreground">Phone: <a href="tel:+447737571541" className="link-underline text-foreground">+44 7737 571541</a></p>
-                </div>
-
-                <p className="text-muted-foreground">
-                  The DSL is responsible for:
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside ml-4">
-                  <li>Acting as the main point of contact for safeguarding concerns</li>
-                  <li>Referring cases of suspected abuse or risk to the relevant local authority and/or police</li>
-                  <li>Keeping detailed, secure safeguarding records</li>
-                  <li>Ensuring all tutors and staff receive appropriate safeguarding training</li>
-                  <li>Liaising with external agencies when necessary</li>
-                  <li>Reviewing and updating this policy annually</li>
-                </ul>
-              </div>
-            </Reveal>
-
-            {/* 3. Safer Recruitment */}
-            <Reveal>
-              <div className="space-y-4">
-                <h2>3. Safer Recruitment &amp; Vetting</h2>
+                <h2>2. Safer Recruitment &amp; Vetting</h2>
                 <p className="text-muted-foreground">
                   Crown Science Education Ltd follows robust safer recruitment practices to ensure that all individuals working with children are suitable to do so.
                 </p>
@@ -150,10 +121,10 @@ export default function SafeguardingPage() {
               </div>
             </Reveal>
 
-            {/* 4. Online Safety */}
+            {/* 3. Online Safety */}
             <Reveal>
               <div className="space-y-4">
-                <h2>4. Online Safety</h2>
+                <h2>3. Online Safety</h2>
                 <p className="text-muted-foreground">
                   As a provider of online tutoring, Crown Science Education Ltd takes online safety extremely seriously and implements the following measures:
                 </p>
@@ -192,57 +163,10 @@ export default function SafeguardingPage() {
               </div>
             </Reveal>
 
-            {/* 5. Recognising Abuse */}
+            {/* 4. Reporting Concerns */}
             <Reveal>
               <div className="space-y-4">
-                <h2>5. Recognising Signs of Abuse</h2>
-                <p className="text-muted-foreground">
-                  All tutors and staff at Crown Science Education Ltd are trained to recognise potential indicators of abuse and neglect. While these signs do not necessarily confirm abuse, they may indicate a need for further assessment:
-                </p>
-
-                <div className="space-y-4">
-                  <div className="border-l-2 border-secondary/40 pl-4">
-                    <h3 className="text-base font-medium">Physical Abuse</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Unexplained injuries, reluctance to discuss injuries, flinching at physical contact, wearing clothing to cover injuries.
-                    </p>
-                  </div>
-
-                  <div className="border-l-2 border-secondary/40 pl-4">
-                    <h3 className="text-base font-medium">Emotional Abuse</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Sudden changes in behaviour, excessive fear of making mistakes, lack of confidence, withdrawal from social interaction, age-inappropriate behaviours.
-                    </p>
-                  </div>
-
-                  <div className="border-l-2 border-secondary/40 pl-4">
-                    <h3 className="text-base font-medium">Sexual Abuse</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Age-inappropriate sexual behaviour or knowledge, avoidance of a specific person, changes in behaviour, difficulty sitting or walking.
-                    </p>
-                  </div>
-
-                  <div className="border-l-2 border-secondary/40 pl-4">
-                    <h3 className="text-base font-medium">Neglect</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Poor hygiene or appearance, constant hunger, frequent absence, lack of appropriate clothing, untreated medical conditions.
-                    </p>
-                  </div>
-
-                  <div className="border-l-2 border-secondary/40 pl-4">
-                    <h3 className="text-base font-medium">Online Harm</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Secretive online activity, distress after using devices, receipt of unexplained gifts, age-inappropriate content on devices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            {/* 6. Reporting Concerns */}
-            <Reveal>
-              <div className="space-y-4">
-                <h2>6. Reporting Concerns</h2>
+                <h2>4. Reporting Concerns</h2>
                 <p className="text-muted-foreground">
                   If anyone has a safeguarding concern about a student, it is essential that they act on it immediately. The welfare of the child is always the overriding priority.
                 </p>
@@ -251,10 +175,10 @@ export default function SafeguardingPage() {
                   <div>
                     <h3 className="text-lg font-medium">How to Report a Concern</h3>
                     <ol className="mt-3 space-y-3 text-sm text-muted-foreground list-decimal list-inside ml-4">
-                      <li><strong>Contact the DSL immediately</strong> &mdash; report concerns to the Designated Safeguarding Lead by phone or email</li>
+                      <li><strong>Contact Crown Science Education immediately</strong> &mdash; report concerns by phone or email</li>
                       <li><strong>Record the concern</strong> &mdash; write down what was observed, heard, or disclosed as soon as possible, using the child&apos;s own words where applicable</li>
                       <li><strong>Do not investigate</strong> &mdash; gathering evidence or questioning the child is not your role; leave this to the appropriate authorities</li>
-                      <li><strong>Maintain confidentiality</strong> &mdash; share concerns only with the DSL and relevant authorities; do not discuss with others</li>
+                      <li><strong>Maintain confidentiality</strong> &mdash; share concerns only with Crown Science Education and relevant authorities; do not discuss with others</li>
                     </ol>
                   </div>
 
@@ -265,33 +189,33 @@ export default function SafeguardingPage() {
                       <li>Reassure the child that they have done the right thing in telling you</li>
                       <li>Do not promise to keep it a secret &mdash; explain that you may need to tell someone who can help</li>
                       <li>Do not ask leading questions; let the child explain in their own words</li>
-                      <li>Record the disclosure accurately and report to the DSL without delay</li>
+                      <li>Record the disclosure accurately and report to Crown Science Education without delay</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </Reveal>
 
-            {/* 7. Referral Procedures */}
+            {/* 5. Referral Procedures */}
             <Reveal>
               <div className="space-y-4">
-                <h2>7. Referral Procedures</h2>
+                <h2>5. Referral Procedures</h2>
                 <p className="text-muted-foreground">
-                  When a safeguarding concern is raised, the DSL will follow a structured process:
+                  When a safeguarding concern is raised, Crown Science Education will follow a structured process:
                 </p>
 
                 <div className="space-y-3">
                   <div className="border-l-2 border-primary/30 pl-4">
                     <h3 className="text-lg font-medium">Assessment</h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      The DSL will assess the concern and determine whether a referral to children&apos;s social care, the police, or another agency is appropriate.
+                      Crown Science Education will assess the concern and determine whether a referral to children&apos;s social care, the police, or another agency is appropriate.
                     </p>
                   </div>
 
                   <div className="border-l-2 border-primary/30 pl-4">
                     <h3 className="text-lg font-medium">Referral</h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      If there is a risk of significant harm, the DSL will make a referral to the local authority children&apos;s social care team without delay. In an emergency, the police will be contacted immediately.
+                      If there is a risk of significant harm, Crown Science Education will make a referral to the local authority children&apos;s social care team without delay. In an emergency, the police will be contacted immediately.
                     </p>
                   </div>
 
@@ -312,25 +236,25 @@ export default function SafeguardingPage() {
               </div>
             </Reveal>
 
-            {/* 8. Prevent Duty */}
+            {/* 6. Prevent Duty */}
             <Reveal>
               <div className="space-y-4">
-                <h2>8. Prevent Duty</h2>
+                <h2>6. Prevent Duty</h2>
                 <p className="text-muted-foreground">
                   Crown Science Education Ltd is committed to fulfilling its duty under the Counter-Terrorism and Security Act 2015 (the Prevent Duty) to have due regard to the need to prevent people from being drawn into terrorism.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside ml-4">
                   <li>All tutors receive training on the Prevent Duty and recognising signs of radicalisation</li>
                   <li>We promote fundamental British values: democracy, the rule of law, individual liberty, and mutual respect and tolerance</li>
-                  <li>Any concerns about radicalisation will be reported to the DSL, who will assess and refer to the Channel programme or police as appropriate</li>
+                  <li>Any concerns about radicalisation will be reported to Crown Science Education, who will assess and refer to the Channel programme or police as appropriate</li>
                 </ul>
               </div>
             </Reveal>
 
-            {/* 9. Training */}
+            {/* 7. Training */}
             <Reveal>
               <div className="space-y-4">
-                <h2>9. Training &amp; Awareness</h2>
+                <h2>7. Training &amp; Awareness</h2>
                 <p className="text-muted-foreground">
                   All tutors and staff at Crown Science Education Ltd receive comprehensive safeguarding training to ensure they are equipped to recognise concerns and act appropriately.
                 </p>
@@ -355,35 +279,30 @@ export default function SafeguardingPage() {
                     <span className="font-medium text-foreground">Online Safety:</span>
                     <span className="text-muted-foreground">Included in induction &amp; refresher</span>
                   </div>
-                  <div className="h-px bg-border" />
-                  <div className="flex justify-between">
-                    <span className="font-medium text-foreground">DSL Training:</span>
-                    <span className="text-muted-foreground">Every two years, with regular updates</span>
-                  </div>
                 </div>
               </div>
             </Reveal>
 
-            {/* 10. Whistleblowing */}
+            {/* 8. Whistleblowing */}
             <Reveal>
               <div className="space-y-4">
-                <h2>10. Whistleblowing</h2>
+                <h2>8. Whistleblowing</h2>
                 <p className="text-muted-foreground">
                   Crown Science Education Ltd recognises that there may be circumstances where a member of staff or a parent needs to raise a concern about the conduct of another adult within the organisation.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside ml-4">
                   <li>All staff and parents are encouraged to raise concerns about unsafe or unethical practices</li>
-                  <li>Concerns can be raised with the DSL or directly with the relevant local authority</li>
+                  <li>Concerns can be raised with Crown Science Education or directly with the relevant local authority</li>
                   <li>Whistleblowers will be protected from reprisal in accordance with the Public Interest Disclosure Act 1998</li>
                   <li>All reports will be taken seriously, investigated promptly, and handled confidentially</li>
                 </ul>
               </div>
             </Reveal>
 
-            {/* 11. Peer-on-Peer Abuse */}
+            {/* 9. Peer-on-Peer Abuse */}
             <Reveal>
               <div className="space-y-4">
-                <h2>11. Peer-on-Peer Abuse</h2>
+                <h2>9. Peer-on-Peer Abuse</h2>
                 <p className="text-muted-foreground">
                   Crown Science Education Ltd recognises that abuse can occur between children and young people. We take a zero-tolerance approach to peer-on-peer abuse in any form, including:
                 </p>
@@ -395,15 +314,15 @@ export default function SafeguardingPage() {
                   <li>Initiation or hazing activities</li>
                 </ul>
                 <p className="text-muted-foreground">
-                  Any incidents of peer-on-peer abuse will be reported to the DSL, investigated thoroughly, and addressed with appropriate action including, where necessary, referral to external agencies.
+                  Any incidents of peer-on-peer abuse will be reported to Crown Science Education, investigated thoroughly, and addressed with appropriate action including, where necessary, referral to external agencies.
                 </p>
               </div>
             </Reveal>
 
-            {/* 12. Information Sharing */}
+            {/* 10. Information Sharing */}
             <Reveal>
               <div className="space-y-4">
-                <h2>12. Information Sharing &amp; Confidentiality</h2>
+                <h2>10. Information Sharing &amp; Confidentiality</h2>
                 <p className="text-muted-foreground">
                   Crown Science Education Ltd will share information with relevant agencies when it is necessary to safeguard a child. We follow the principle that safeguarding concerns override the duty of confidentiality.
                 </p>
@@ -422,7 +341,7 @@ export default function SafeguardingPage() {
                     <h3 className="text-base font-medium">How We Protect Information</h3>
                     <ul className="mt-2 space-y-2 text-sm text-muted-foreground list-disc list-inside ml-4">
                       <li>Safeguarding records are kept securely and separately from other records</li>
-                      <li>Access is restricted to the DSL and authorised personnel only</li>
+                      <li>Access is restricted to authorised personnel only</li>
                       <li>Data is handled in compliance with UK GDPR and the Data Protection Act 2018</li>
                     </ul>
                   </div>
@@ -435,12 +354,12 @@ export default function SafeguardingPage() {
               </div>
             </Reveal>
 
-            {/* 13. Review */}
+            {/* 11. Review */}
             <Reveal>
               <div className="space-y-4">
-                <h2>13. Policy Review</h2>
+                <h2>11. Policy Review</h2>
                 <p className="text-muted-foreground">
-                  This Safeguarding Policy is reviewed annually by the Designated Safeguarding Lead to ensure it remains current, effective, and aligned with the latest legislation and guidance. The policy may also be updated at any time in response to changes in legislation, statutory guidance, or identified gaps in practice.
+                  This Safeguarding Policy is reviewed annually to ensure it remains current, effective, and aligned with the latest legislation and guidance. The policy may also be updated at any time in response to changes in legislation, statutory guidance, or identified gaps in practice.
                 </p>
                 <p className="text-muted-foreground">
                   Any significant changes to this policy will be communicated to all families and staff in writing.
@@ -451,18 +370,10 @@ export default function SafeguardingPage() {
             {/* Emergency Contacts */}
             <Reveal>
               <div className="space-y-4">
-                <h2>14. Key Contacts &amp; Helplines</h2>
+                <h2>12. Key Contacts &amp; Helplines</h2>
                 <p className="text-muted-foreground">
                   If you have an immediate safeguarding concern, please use one of the following contacts:
                 </p>
-
-                <div className="rounded-md border-2 border-primary/20 bg-primary/5 p-6 space-y-4 text-sm">
-                  <div>
-                    <p className="font-medium text-foreground">Crown Science Education DSL</p>
-                    <p className="text-muted-foreground">Email: <a href="mailto:taiwoteaching@gmail.com" className="link-underline text-foreground">taiwoteaching@gmail.com</a></p>
-                    <p className="text-muted-foreground">Phone: <a href="tel:+447737571541" className="link-underline text-foreground">+44 7737 571541</a></p>
-                  </div>
-                </div>
 
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-4 text-sm">
                   <p className="font-medium text-foreground">External Safeguarding Contacts</p>
@@ -514,7 +425,6 @@ export default function SafeguardingPage() {
                 <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside ml-4">
                   <li>All tutors hold enhanced DBS checks and receive regular safeguarding training</li>
                   <li>All online lessons are recorded for safeguarding and quality assurance</li>
-                  <li>A Designated Safeguarding Lead is in place to handle all concerns</li>
                   <li>Robust procedures for reporting, recording, and referring concerns</li>
                   <li>Commitment to the Prevent Duty and promoting British values</li>
                   <li>Strict professional boundaries and online safety measures</li>

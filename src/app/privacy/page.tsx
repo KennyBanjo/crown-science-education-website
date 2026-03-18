@@ -56,7 +56,8 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-2 text-sm">
                   <p className="font-medium text-foreground">Data Controller:</p>
                   <p className="text-muted-foreground">Crown Science Education</p>
-                  <p className="text-muted-foreground">Leeds, United Kingdom</p>
+                  <p className="text-muted-foreground">71-75 Shelton Street, Covent Garden</p>
+                  <p className="text-muted-foreground">London, WC2H 9JQ</p>
                   <p className="text-muted-foreground">Email: taiwoteaching@gmail.com</p>
                   <p className="text-muted-foreground">Phone: +44 7737 571541</p>
                 </div>
@@ -522,7 +523,8 @@ export default function PrivacyPolicyPage() {
                   <div>
                     <p className="font-medium text-foreground">Post:</p>
                     <p className="text-muted-foreground">Crown Science Education</p>
-                    <p className="text-muted-foreground">Leeds, United Kingdom</p>
+                    <p className="text-muted-foreground">71-75 Shelton Street, Covent Garden</p>
+                    <p className="text-muted-foreground">London, WC2H 9JQ</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground mt-4">
