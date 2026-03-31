@@ -8,8 +8,9 @@ import { SectionDividerLine } from "@/components/motion/section-divider-line";
 export default function Home() {
   return (
     <div className="bg-background">
-      <section className="section" aria-labelledby="intro-title">
-        <div className="page-container">
+      <section className="section relative overflow-hidden" aria-labelledby="intro-title">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(245,147,50,0.04),transparent)] pointer-events-none" aria-hidden="true" />
+        <div className="page-container relative">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
             <Stagger className="space-y-6">
               <p className="eyebrow">Crown Science Education</p>
@@ -45,7 +46,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="space-y-3 border-l border-border pl-6 text-sm text-muted-foreground">
-                <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                <p className="eyebrow">
                   Practice notes
                 </p>
                 <p>
@@ -101,7 +102,7 @@ export default function Home() {
               </div>
               <div className="divide-y divide-border">
                 <div className="py-8">
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Structure
                   </p>
                   <p className="mt-3 text-muted-foreground">
@@ -110,7 +111,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="py-8">
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Expectations
                   </p>
                   <p className="mt-3 text-muted-foreground">
@@ -119,7 +120,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="py-8">
-                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Outcomes
                   </p>
                   <p className="mt-3 text-muted-foreground">
@@ -239,7 +240,7 @@ export default function Home() {
                 </p>
                 <div className="divide-y divide-border">
                   <div className="py-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    <p className="text-sm font-medium tracking-wide text-muted-foreground">
                       Teaching approach
                     </p>
                     <p className="mt-3 text-muted-foreground">
@@ -249,7 +250,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="py-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    <p className="text-sm font-medium tracking-wide text-muted-foreground">
                       Curriculum leadership
                     </p>
                     <p className="mt-3 text-muted-foreground">
@@ -259,7 +260,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="py-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    <p className="text-sm font-medium tracking-wide text-muted-foreground">
                       Professional standing
                     </p>
                     <p className="mt-3 text-muted-foreground">
@@ -269,7 +270,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="py-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                    <p className="text-sm font-medium tracking-wide text-muted-foreground">
                       Session format
                     </p>
                     <p className="mt-3 text-muted-foreground">
@@ -297,60 +298,66 @@ export default function Home() {
               <p className="eyebrow">Testimonials</p>
               <h2 id="testimonials-title">What families notice.</h2>
             </div>
-            <div className="mt-10 grid gap-10 lg:grid-cols-2">
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;Working with her each week brought calm to science lessons. The
-                  focus on vocabulary and explanation made everything click.&rdquo;
+            <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3">
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-foreground">
+                  Working with her each week brought calm to science lessons. The
+                  focus on vocabulary and explanation made everything click.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   Parent of Year 8 pupil, Islington
                 </figcaption>
               </figure>
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;Her tutoring is structured but kind. I know exactly what to
-                  revise each week and my confidence in GCSE papers has grown.&rdquo;
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-foreground">
+                  Her tutoring is structured but kind. I know exactly what to
+                  revise each week and my confidence in GCSE papers has grown.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   GCSE student, Hertfordshire
                 </figcaption>
               </figure>
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;The portal makes everything simple. We can see what was covered,
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-foreground">
+                  The portal makes everything simple. We can see what was covered,
                   what to practise next, and the resources in one place. It&rsquo;s taken
-                  away the back-and-forth and helped us stay consistent between lessons.&rdquo;
+                  away the back-and-forth and helped us stay consistent between lessons.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   Parent of Year 10 pupil, London
                 </figcaption>
               </figure>
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;My daughter went from dreading chemistry to genuinely enjoying
-                  it. The patient, methodical approach made all the difference.&rdquo;
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-foreground">
+                  My daughter went from dreading chemistry to genuinely enjoying
+                  it. The patient, methodical approach made all the difference.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   Parent of Year 9 pupil, Manchester
                 </figcaption>
               </figure>
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;I improved from a grade 4 to a grade 7 in physics. The exam
-                  technique sessions were especially helpful for longer questions.&rdquo;
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-lg text-foreground">
+                  I improved from a grade 4 to a grade 7 in physics. The exam
+                  technique sessions were especially helpful for longer questions.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   GCSE student, Birmingham
                 </figcaption>
               </figure>
-              <figure className="border-l border-border pl-6">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;Having everything in the student portal keeps me organised. I know
+              <figure className="mb-5 break-inside-avoid rounded-lg bg-muted/50 p-6">
+                <span className="block font-display text-4xl leading-none text-crown-gold-200 select-none" aria-hidden="true">&ldquo;</span>
+                <blockquote className="mt-2 text-foreground">
+                  Having everything in the student portal keeps me organised. I know
                   exactly what I&rsquo;m working on each week, and I can rewatch the videos
-                  and redo the questions before the next lesson.&rdquo;
+                  and redo the questions before the next lesson.
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-muted-foreground">
+                <figcaption className="mt-4 text-sm text-muted-foreground">
                   GCSE student, Hertfordshire
                 </figcaption>
               </figure>
@@ -377,14 +384,14 @@ export default function Home() {
             </div>
 
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              <div className="space-y-5 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5 hover:border-border/80">
+              <div className="space-y-5 rounded-md border border-border bg-card p-6 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-warm-md hover:border-border/80">
                 <div>
-                  <span className="inline-block rounded-sm bg-secondary/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-secondary-700 dark:text-secondary-300">
+                  <span className="inline-block rounded-sm bg-muted px-3 py-1.5 text-xs font-medium tracking-wide text-muted-foreground">
                     Group programme
                   </span>
                   <h3 className="mt-4">Momentum</h3>
                 </div>
-                <p className="font-display text-4xl tracking-tight">
+                <p className="font-display text-4xl tracking-tight tabular-nums">
                   £250<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
@@ -400,14 +407,14 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="space-y-5 rounded-md border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50 hover:ring-primary/20">
+              <div className="space-y-5 rounded-md border border-primary/20 bg-gradient-to-b from-primary/[0.04] to-card p-6 ring-1 ring-primary/10 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-crown-lg hover:border-primary/30 hover:ring-primary/15">
                 <div>
-                  <span className="inline-block rounded-sm bg-primary/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-700 dark:text-primary-300">
+                  <span className="inline-block rounded-sm bg-primary/10 px-3 py-1.5 text-xs font-medium tracking-wide text-primary-800">
                     One-to-one
                   </span>
                   <h3 className="mt-4">Progress Accelerator</h3>
                 </div>
-                <p className="font-display text-4xl tracking-tight">
+                <p className="font-display text-4xl tracking-tight tabular-nums">
                   £495<span className="text-sm font-sans text-muted-foreground/60 ml-1">/month</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
@@ -425,7 +432,7 @@ export default function Home() {
 
             <div className="mt-10 grid gap-8 border-t border-border pt-10 lg:grid-cols-2">
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-sm font-medium tracking-wide text-muted-foreground">
                   Included in both programmes
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
@@ -437,7 +444,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-sm font-medium tracking-wide text-muted-foreground">
                   Expected outcomes
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">

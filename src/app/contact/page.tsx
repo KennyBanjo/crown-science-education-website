@@ -39,7 +39,7 @@ export default function ContactPage() {
               {/* Phone */}
               <Reveal>
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-3">
-                  <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Phone
                   </p>
                   <a
@@ -57,7 +57,7 @@ export default function ContactPage() {
               {/* Email */}
               <Reveal>
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-3">
-                  <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Email
                   </p>
                   <a
@@ -75,7 +75,7 @@ export default function ContactPage() {
               {/* Office */}
               <Reveal>
                 <div className="rounded-md border border-border bg-muted/30 p-6 space-y-3 sm:col-span-2 lg:col-span-1">
-                  <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                  <p className="text-sm font-medium tracking-wide text-muted-foreground">
                     Office
                   </p>
                   <div className="text-foreground">

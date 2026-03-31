@@ -26,8 +26,8 @@ export function BookingConfirmation({ booking, parentEmail }: BookingConfirmatio
 
       {/* Booking details card */}
       <div className="mt-8 rounded-lg border border-foreground/20 bg-foreground/5 p-6 text-left">
-        <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-          Booking Details
+        <h3 className="mb-4 text-sm font-medium tracking-wide text-muted-foreground">
+          Booking details
         </h3>
 
         <div className="space-y-4">

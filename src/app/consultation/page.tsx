@@ -36,8 +36,8 @@ export default function ConsultationPage() {
       <section className="border-b border-foreground/10 bg-gradient-to-b from-crown-gold-50/50 to-background">
         <div className="mx-auto max-w-2xl px-6 py-16 text-center sm:py-20">
           <Reveal>
-            <p className="text-sm font-medium uppercase tracking-widest text-crown-gold-600">
-              Free Consultation
+            <p className="text-sm font-medium tracking-wide text-crown-gold-600">
+              Free consultation
             </p>
           </Reveal>
           <Reveal>

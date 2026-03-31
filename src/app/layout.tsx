@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import { Libre_Baskerville, Outfit } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsentProvider } from "@/lib/consent/use-cookie-consent";
@@ -15,10 +15,10 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -76,13 +76,19 @@ export default function RootLayout({
   return (
     <html
       lang="en-GB"
-      className={`${sourceSans.variable} ${libreBaskerville.variable}`}
+      className={`${outfit.variable} ${libreBaskerville.variable}`}
     >
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:ring-2 focus:ring-ring"
+        >
+          Skip to content
+        </a>
         <CookieConsentProvider>
           <GoogleAnalytics />
           <Header />
-          <main className="pt-24">{children}</main>
+          <main id="main-content" className="pt-24">{children}</main>
           <Footer />
           <CookieConsentBanner />
         </CookieConsentProvider>

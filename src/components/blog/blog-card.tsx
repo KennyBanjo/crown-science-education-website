@@ -6,7 +6,7 @@ export function BlogCard({ post }: { post: BlogPostMeta }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block overflow-hidden rounded-lg border border-border bg-background transition-shadow hover:shadow-crown"
+      className="group block overflow-hidden rounded-lg bg-background shadow-warm-sm transition-all duration-200 hover:shadow-warm-md hover:-translate-y-px"
     >
       <div className="relative aspect-[16/9] overflow-hidden bg-muted">
         <Image
@@ -18,7 +18,7 @@ export function BlogCard({ post }: { post: BlogPostMeta }) {
         />
       </div>
       <div className="p-5">
-        <span className="inline-block rounded-full bg-crown-gold-50 px-3 py-1 text-xs font-medium text-crown-gold-700">
+        <span className="inline-block rounded-md bg-crown-gold-50 px-2.5 py-1 text-xs font-medium text-crown-gold-700">
           {post.category}
         </span>
         <h3 className="mt-3 font-display text-lg leading-snug text-foreground group-hover:text-crown-gold-600 transition-colors">

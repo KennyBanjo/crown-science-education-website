@@ -199,16 +199,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "crown-gradient":
-          "linear-gradient(135deg, #f59332 0%, #f6c75a 50%, #2dd4bf 100%)",
+          "linear-gradient(135deg, #f6c75a 0%, #f59332 50%, #e55f11 100%)",
         "crown-gradient-dark":
-          "linear-gradient(135deg, #e55f11 0%, #f59332 50%, #14b8a6 100%)",
+          "linear-gradient(135deg, #e55f11 0%, #be4110 50%, #973314 100%)",
       },
       boxShadow: {
-        crown: "0 4px 14px 0 rgba(245, 147, 50, 0.15)",
-        "crown-lg": "0 10px 25px -3px rgba(245, 147, 50, 0.2)",
-        "crown-xl": "0 20px 35px -5px rgba(245, 147, 50, 0.25)",
-        glow: "0 0 20px rgba(245, 147, 50, 0.3)",
-        "glow-teal": "0 0 20px rgba(45, 212, 191, 0.3)",
+        crown: "0 4px 14px 0 rgba(184, 115, 51, 0.1)",
+        "crown-lg": "0 10px 25px -3px rgba(184, 115, 51, 0.14)",
+        "crown-xl": "0 20px 35px -5px rgba(184, 115, 51, 0.18)",
+        glow: "0 0 24px rgba(245, 147, 50, 0.2)",
+        "warm-sm": "0 1px 3px 0 rgba(120, 80, 40, 0.06), 0 1px 2px -1px rgba(120, 80, 40, 0.06)",
+        "warm-md": "0 4px 6px -1px rgba(120, 80, 40, 0.07), 0 2px 4px -2px rgba(120, 80, 40, 0.05)",
       },
       screens: {
         xs: "475px",
